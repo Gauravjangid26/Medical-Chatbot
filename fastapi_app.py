@@ -12,5 +12,5 @@ def chat(query: Query):
     if any(k in query.question.lower() for k in ["symptom", "pain", "treatment", "doctor", "fever", "disease", "medicine"]):
         response = ask_bot(query.question)
     else:
-        response = "⚠️ I only answer medical-related questions."
+        response = "I only answer medical-related questions."
     return {"response": response}
